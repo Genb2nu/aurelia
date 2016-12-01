@@ -1,4 +1,4 @@
-import 'bootstrap';
+// import 'bootstrap';
 import config from './auth-config'
 
 export function configure(aurelia) {

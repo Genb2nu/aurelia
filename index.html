@@ -4,11 +4,25 @@
     <meta charset="utf-8">
     <title>Aurelia</title>
     <!--The FontAwesome version is locked at 4.6.3 in the package.json file to keep this from breaking.-->
-    <link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.6.3/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.6.3/css/font-awesome.min.css">-->
+    
+
     <link rel="stylesheet" href="styles/styles.css">
+    <!--genesis-->
+    <link href="genesis/css/font-awesome.min.css" rel="stylesheet">
+    <link href="genesis/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Premium Icons -->
+    <link href="genesis/css/glyphicons.css" rel="stylesheet">
+    <link href="genesis/css/glyphicons-filetypes.css" rel="stylesheet">
+    <link href="genesis/css/glyphicons-social.css" rel="stylesheet">
+
+    <!-- Main styles for this application -->
+    <link href="genesis/css/style.css" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-
+ 
   <body aurelia-app="main">
     <div class="splash">
       <div class="message">Aurelia Navigation Skeleton</div>
@@ -27,5 +41,24 @@
     <script>
       System.import('aurelia-bootstrapper');
     </script>
+     <!-- Bootstrap and necessary plugins -->
+    <script src="genesis/js/libs/jquery.min.js"></script>
+    <script src="genesis/js/libs/tether.min.js"></script>
+    <!--<script src="genesis/js/libs/bootstrap.min.js"></script>-->
+    <script src="genesis/js/libs/pace.min.js"></script>
+
+     <!-- Plugins and scripts required by all views -->
+    <script src="genesis/js/libs/Chart.min.js"></script>
+
+    <!-- GenesisUI main scripts -->
+
+    <script src="genesis/js/app.js"></script>
+
+    <!-- Plugins and scripts required by this views -->
+    <script src="genesis/js/libs/toastr.min.js"></script>
+    <script src="genesis/js/libs/gauge.min.js"></script>
+    <script src="genesis/js/libs/moment.min.js"></script>
+    <script src="genesis/js/libs/daterangepicker.js"></script>
+    
   </body>
 </html>

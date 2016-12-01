@@ -12,8 +12,6 @@ export class Login{
 	email='';
 	password='';
 	login(){
-		
-
 	    var creds = "grant_type=password&email=" + this.email + "&password=" + this.password;
 		return this.auth.login(this.email, this.password)
         //return this.auth.login(creds)
@@ -22,7 +20,6 @@ export class Login{
 		})
 		.catch(err=>{
             err.json().then(function(e){
-                alert('ERROR!');
             console.log("login failure : " + e.message);    
             });
 			
