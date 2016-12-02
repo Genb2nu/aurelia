@@ -16,6 +16,7 @@ export class App {
 
     activate() {
         this.appRouterConfig.configure();
-        this.fetchConfig.configure();
+        this.fetchConfig.configure();        
     }
+    
 }

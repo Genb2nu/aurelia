@@ -1,15 +1,17 @@
 import {bindable} from 'aurelia-framework';
 import {inject} from 'aurelia-framework';
 import {AuthService} from 'aurelia-auth';
+import { Aurelia } from 'aurelia-framework';
 
-@inject(AuthService)
+@inject(AuthService,Aurelia)
 
 export class NavBar {
   _isAuthenticated = false;
   @bindable router = null;
 
-  constructor(auth) {
+  constructor(auth, aurelia) {
     this.auth = auth;
+    this.aurelia = aurelia;
   }
 
   get isAuthenticated() {
@@ -19,5 +21,8 @@ export class NavBar {
   deactivate() {
         this.subscription.dispose();
     }
+  login(){
+    this.aurelia.setRoot('login/login');
+  }
 
 }
