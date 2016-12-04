@@ -10,7 +10,7 @@ export class Logout{
 	};
 	
 	 activate(){
-		this.authService.logout("#/login")
+		this.authService.logout("#/welcome")
 		.then(response=>{
 			console.log("ok logged out on  logout.js");
 		})

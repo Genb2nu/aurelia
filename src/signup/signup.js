@@ -3,7 +3,7 @@ import {AuthService} from 'aurelia-auth';
 @inject(AuthService)
 
 export class Signup{
-	constructor( auth){
+	constructor(auth){
 		this.auth = auth;
 	}
 	heading = 'Sign Up';

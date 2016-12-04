@@ -17,6 +17,8 @@ export class App {
     activate() {
         this.appRouterConfig.configure();
         this.fetchConfig.configure();        
+    }    
+    getRoute(){
+        console.log(this.router.currentInstruction);
     }
-    
 }

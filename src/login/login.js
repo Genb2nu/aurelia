@@ -1,11 +1,12 @@
 import {AuthService} from 'aurelia-auth';
-import {inject} from 'aurelia-framework';
-@inject(AuthService )
+import {inject, Aurelia} from 'aurelia-framework';
+@inject(AuthService, Aurelia)
 
 export class Login{
 	
-	constructor(auth){
+	constructor(auth, aurelia){
 		this.auth = auth;
+		this.aurelia = aurelia;
 	};
 
 	heading = 'Login';
@@ -17,6 +18,7 @@ export class Login{
 		return this.auth.login(this.email, this.password)
         //return this.auth.login(creds)
 		.then(response=>{
+			this.aurelia.setRoot('app');
 			console.log("success logged " + response);
 		})
 		.catch(err=>{
